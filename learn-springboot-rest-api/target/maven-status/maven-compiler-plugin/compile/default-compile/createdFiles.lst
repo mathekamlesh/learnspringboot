@@ -1,1 +1,6 @@
+learn/springboot/dao/PersonDao.class
+learn/springboot/api/PersonController.class
+learn/springboot/model/Person.class
+learn/springboot/service/PersonService.class
 learn/springboot/RestApp.class
+learn/springboot/dao/FakePersonDataAccessService.class
