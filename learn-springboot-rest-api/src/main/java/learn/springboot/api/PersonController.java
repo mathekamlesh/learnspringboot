@@ -25,9 +25,17 @@ public class PersonController {
     public List<Person> getAllPeople(){
         return personService.getAllPeople();
     }
-
-    public Person getPersonById(UUID id){
-        return personService.getPersonById(id).orElseThrow(null);
+    @GetMapping(path = "{id}")
+    public Person getPersonById(@PathVariable("id") UUID id){
+        return personService.getPersonById(id).orElse(null);
+    }
+    @DeleteMapping(path = "{id}")
+    public int deletePersonById(@PathVariable("id") UUID id){
+        return personService.deletePersonById(id);
+    }
+    @PutMapping()
+    public int updatePersonByid(@RequestBody Person person){
+        return personService.updatePersonById(person.getId(),person);
     }
 }
 

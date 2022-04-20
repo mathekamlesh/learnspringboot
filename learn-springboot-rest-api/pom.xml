@@ -12,5 +12,13 @@
         <artifactId>learn-springboot-parent</artifactId>
         <version>1.0.0-RELEASE</version>
     </parent>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.6.5</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
