@@ -20,18 +20,18 @@ public class StudentConfig {
             Student kamlesh = new Student(
                     "Kamlesh",
                     LocalDate.of(2000, Month.JANUARY, 5),
-                    "mathekamlesh@gmail.com"
+                    "mathe1@gmail.com"
             );
             Student mathe = new Student(
                     "Mathe",
                     LocalDate.of(2000, Month.JANUARY, 5),
-                    "mathekamlesh@gmail.com"
+                    "mathe2@gmail.com"
             );
 
             Student kapil = new Student(
                     "Kapil",
                     LocalDate.of(2000, Month.JANUARY, 5),
-                    "mathekamlesh@gmail.com"
+                    "mathe3@gmail.com"
             );
 
             resository.saveAll(Arrays.asList(kamlesh,mathe,kapil));
