@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "db",
+      "type": "annotations.DBConfig",
+      "sourceType": "annotations.DBConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "db.connection-string",
+      "type": "java.lang.String",
+      "sourceType": "annotations.DBConfig"
+    },
+    {
+      "name": "db.password",
+      "type": "java.lang.String",
+      "sourceType": "annotations.DBConfig"
+    },
+    {
+      "name": "db.port",
+      "type": "java.lang.Integer",
+      "sourceType": "annotations.DBConfig"
+    },
+    {
+      "name": "db.username",
+      "type": "java.lang.String",
+      "sourceType": "annotations.DBConfig"
+    }
+  ],
+  "hints": []
+}
