@@ -3,6 +3,9 @@ import java.util.Optional;
 
 public class OptionalTypes {
     public static void main(String[] args) {
+        int i =4;
+        String s = " s.CATEGORY_ID = ?"+ Integer.toString(i) + " AND s.SUB_CATEGORY_ID IN (?"+Integer.toString(i+1)+") ";
+        System.out.println(s);
         Optional<String> hello = Optional.ofNullable("Hello");
         System.out.println(hello.isPresent());
 //        Object var = hello

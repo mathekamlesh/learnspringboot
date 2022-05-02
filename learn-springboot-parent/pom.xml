@@ -8,6 +8,7 @@
         <module>../learn-springboot-annotation</module>
         <module>../learn-springboot-student-app</module>
         <module>../learn-springboot-oracledb</module>
+        <module>../lean-springboot-custom-validation</module>
     </modules>
     <groupId>learn.springboot</groupId>
     <artifactId>learn-springboot-parent</artifactId>
