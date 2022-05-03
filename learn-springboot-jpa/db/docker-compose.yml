@@ -1,0 +1,20 @@
+version: '2'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql:8.0-oracle
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: xpassword
+    networks:
+      - app-tier
+    volumes:
+      - mysqldata:/var/lib/mysql
+    ports:
+      - '3306:3306'
+volumes:
+  mysqldata: {}
