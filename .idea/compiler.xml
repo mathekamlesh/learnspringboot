@@ -2,21 +2,38 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="learn-springboot-security" />
+        <module name="learn-springboot-jpa" />
         <module name="learn-springboot-rest-api" />
+        <module name="learn-springboot-oracledb" />
+        <module name="learn-springboot-annotation" />
+        <module name="learn-jpa-table-join" />
+        <module name="learn-springboot-student-app" />
+        <module name="DataStructure" />
+        <module name="learn-springboot-dependency-injection" />
+        <module name="learn-springboot-ds-types" />
+        <module name="lean-springboot-custom-validation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="learn-springboot-parent" target="1.8" />
-      <module name="learn-springboot-rest-api" target="1.8" />
+      <module name="learn-springboot-anotation" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lean-springboot-custom-validation" options="-parameters" />
+      <module name="learn-springboot-annotation" options="-parameters" />
+      <module name="learn-springboot-anotation" options="-parameters" />
+      <module name="learn-springboot-jpa" options="-parameters" />
+      <module name="learn-springboot-oracledb" options="-parameters" />
       <module name="learn-springboot-rest-api" options="-parameters" />
+      <module name="learn-springboot-security" options="-parameters" />
+      <module name="learn-springboot-student-app" options="-parameters" />
     </option>
   </component>
 </project>

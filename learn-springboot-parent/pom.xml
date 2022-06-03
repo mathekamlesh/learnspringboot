@@ -10,6 +10,7 @@
         <module>../learn-springboot-oracledb</module>
         <module>../lean-springboot-custom-validation</module>
         <module>../learn-springboot-jpa</module>
+        <module>../learn-springboot-security</module>
     </modules>
     <groupId>learn.springboot</groupId>
     <artifactId>learn-springboot-parent</artifactId>

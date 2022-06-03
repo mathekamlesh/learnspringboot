@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Learn_Spring_Boot.iml" filepath="$PROJECT_DIR$/Learn_Spring_Boot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/learn-spring-boot-parent/learn-springboot-parent.iml" filepath="$PROJECT_DIR$/learn-spring-boot-parent/learn-springboot-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/learn-springboot-rest-api/learn-springboot-rest-api.iml" filepath="$PROJECT_DIR$/learn-springboot-rest-api/learn-springboot-rest-api.iml" />
     </modules>
   </component>
 </project>
