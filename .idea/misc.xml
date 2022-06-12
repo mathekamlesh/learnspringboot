@@ -12,10 +12,11 @@
         <option value="$PROJECT_DIR$/learn-springboot-jpa/pom.xml" />
         <option value="$PROJECT_DIR$/DataStructure/pom.xml" />
         <option value="$PROJECT_DIR$/learn-jpa-table-join/pom.xml" />
+        <option value="$PROJECT_DIR$/Learn Ingress/Cart/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-18 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">
