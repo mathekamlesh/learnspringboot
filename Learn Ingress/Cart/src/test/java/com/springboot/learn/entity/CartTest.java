@@ -4,6 +4,8 @@ import com.springboot.learn.repository.catalog.CartRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 
 import java.util.Date;
 import java.util.List;
@@ -29,7 +31,8 @@ class CartTest {
     }
     @Test
     public void getCart(){
-        Cart cart = cartRepository.findCartByUserId(1L);
+        PageRequest pageRequest = PageRequest.of(0, 1, Sort.by(Sort.Direction.DESC, "cartId"));
+        Cart cart = cartRepository.findCartByUserId(1L,pageRequest);
         System.out.println(cart);
     }
 

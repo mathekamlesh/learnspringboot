@@ -20,7 +20,7 @@ import java.util.List;
 public class CartMapper {
     @Autowired
     private AppContext appContext;
-    public Response<GetCartResponse> createSuccessResponse(Cart cart){
+    public Response<GetCartResponse> createSuccessResponse(Cart cart) {
         System.out.println(cart);
         List<GetCartProductDetail> cartDetails = new ArrayList<>();
         Response<GetCartResponse> response = new Response<>();
@@ -55,7 +55,7 @@ public class CartMapper {
         return response;
     }
 
-    public Response<GetCartResponse> createFailureResponse(Exception $exp){
+    public Response<GetCartResponse> createFailureResponse(Exception $exp) {
         Response<GetCartResponse> response = new Response<>();
         Body<GetCartResponse> body = new Body<>();
         body.setData(null);
@@ -70,7 +70,8 @@ public class CartMapper {
         return response;
     }
 
-    public Response<GetCartResponse> createInternalErrorResponse(Exception $exp){
+    public Response<GetCartResponse> createInternalErrorResponse(Exception $exp) {
+        System.out.println($exp);
         Response<GetCartResponse> response = new Response<>();
         Body<GetCartResponse> body = new Body<>();
         body.setData(null);

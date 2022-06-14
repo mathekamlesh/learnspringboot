@@ -18,6 +18,7 @@
         <module name="learn-springboot-dependency-injection" />
         <module name="learn-springboot-ds-types" />
         <module name="lean-springboot-custom-validation" />
+        <module name="Cart" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Cart" options="-parameters" />
       <module name="lean-springboot-custom-validation" options="-parameters" />
       <module name="learn-springboot-annotation" options="-parameters" />
       <module name="learn-springboot-anotation" options="-parameters" />

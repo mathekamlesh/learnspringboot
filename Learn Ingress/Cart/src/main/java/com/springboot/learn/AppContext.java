@@ -1,28 +1,30 @@
 package com.springboot.learn;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Component;
-import org.springframework.web.context.WebApplicationContext;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+
+@Getter
+@Setter
+@SessionScope
 @Component
-@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class AppContext {
     private Date requestStartTime;
     private Date requestEndTime;
+    private TimeUnit timeUnit;
 
     public AppContext() {
         requestStartTime = new Date();
     }
 
-    public double timeTaken(){
+    public Long timeTaken() {
         requestEndTime = new Date();
-        return (requestEndTime.getTime() - requestStartTime.getTime());
+        long diffInMillies = (requestEndTime.getTime() - requestStartTime.getTime());
+        return diffInMillies;
     }
 }

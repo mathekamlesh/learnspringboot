@@ -32,7 +32,8 @@ public class Cart implements Serializable {
     @Column(name = "type")
     private Integer type;
     @OneToMany(
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "cart_id",

@@ -3,6 +3,9 @@ package com.springboot.learn.controller;
 import com.springboot.learn.AppContext;
 import com.springboot.learn.datamapper.CartMapper;
 import com.springboot.learn.dto.GetCartResponse;
+import com.springboot.learn.dto.request.CreateCartRequest;
+import com.springboot.learn.dto.request.Request;
+import com.springboot.learn.dto.request.UpdateCartRequest;
 import com.springboot.learn.dto.response.Response;
 import com.springboot.learn.entity.Cart;
 import com.springboot.learn.exception.ApiException;
@@ -39,13 +42,25 @@ public class CartControllerImpl implements CartServiceController {
     @Override
     public ResponseEntity<Response<GetCartResponse>> getCart(
             @PathVariable(name = "userId",required = false) Long puserId,
-            @RequestParam(name = "userId",required = false) Long ruserId) {
+            @RequestParam(name = "userId",required = false) Long ruserId)  {
 
         if( puserId == null && ruserId == null ){
             throw new ApiException("0","Please provide userId Cart/getCart/{userId}","0");
         }
         Long userId = puserId == null ? ruserId:puserId;
         Cart cartDetail = cartService.getCartDetail(userId);
-        return new ResponseEntity<Response<GetCartResponse>>(cartMapper.createSuccessResponse(cartDetail), HttpStatus.OK);
+        return new ResponseEntity<>(cartMapper.createSuccessResponse(cartDetail), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Response<GetCartResponse>> createCart(Long userId,Request<CreateCartRequest> createCartRequest) {
+        Cart cart = cartService.createCart(userId, createCartRequest.getBody());
+        return new ResponseEntity<>(cartMapper.createSuccessResponse(cart), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Response<GetCartResponse>> updateCart(Long userId, Request<UpdateCartRequest> updateCartRequestRequest) {
+        Cart cart = cartService.updateCart(userId, updateCartRequestRequest.getBody());
+        return new ResponseEntity<>(cartMapper.createSuccessResponse(cart), HttpStatus.OK);
     }
 }

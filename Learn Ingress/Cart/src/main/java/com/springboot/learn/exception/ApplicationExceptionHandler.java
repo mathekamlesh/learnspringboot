@@ -17,13 +17,13 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
     private CartMapper cartMapper;
 
     @ExceptionHandler(value = {ApiException.class})
-    protected ResponseEntity<Response<GetCartResponse>> handleApiException(Exception $ex){
+    protected ResponseEntity<Response<GetCartResponse>> handleApiException(Exception $ex)  {
         Response<GetCartResponse> response = cartMapper.createFailureResponse($ex);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(value = {Exception.class})
-    protected ResponseEntity<Response<GetCartResponse>> handleOtherException(Exception $ex){
+    protected ResponseEntity<Response<GetCartResponse>> handleOtherException(Exception $ex)  {
         Response<GetCartResponse> response = cartMapper.createInternalErrorResponse($ex);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
